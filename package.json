@@ -1,0 +1,23 @@
+{
+  "name": "sisi",
+  "version": "0.1.0",
+  "description": "Super Intuitive Subscription Interface",
+  "main": "index.js",
+  "scripts": {
+    "start": "drosse serve app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jota-one/sisi.git"
+  },
+  "author": "JAW (Juniors At Work)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jota-one/sisi/issues"
+  },
+  "homepage": "https://github.com/jota-one/sisi#readme",
+  "devDependencies": {
+    "@jota-one/drosse": "^2.6.2"
+  }
+}
