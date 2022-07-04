@@ -1,0 +1,64 @@
+{
+  "api": {
+    "events": {
+      "DROSSE": {
+        "get": {
+          "service": true
+        },
+        "post": {
+          "service": true
+        }
+      },
+      ":id": {
+        "DROSSE": {
+          "put": {
+            "service": true
+          },
+          "delete": {
+            "service": true
+          }
+        }
+      }
+    },
+    "place": {
+      "DROSSE": {
+        "get": {
+          "service": true
+        },
+        "post": {
+          "service": true
+        }
+      },
+      ":id": {
+        "DROSSE": {
+          "put": {
+            "service": true
+          },
+          "delete": {
+            "service": true
+          }
+        }
+      }
+    },
+    "users": {
+      "DROSSE": {
+        "get": {
+          "service": true
+        },
+        "post": {
+          "service": true
+        }
+      },
+      ":id": {
+        "DROSSE": {
+          "put": {
+            "service": true
+          },
+          "delete": {
+            "service": true
+          }
+        }
+      }
+    }
+  }
+}
