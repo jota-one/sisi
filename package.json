@@ -26,9 +26,10 @@
   },
   "scripts": {
     "start": "drosse serve server",
-    "compile": "tsc",
-    "build": "unbuild",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf dist && yarn build:api && yarn build:ui",
+    "build:api": "unbuild",
+    "build:ui": "cd ui && yarn build",
+    "dev:ui": "cd ui && yarn dev"
   },
   "devDependencies": {
     "@jota-one/drosse": "^2.6.2",
