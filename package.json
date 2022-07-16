@@ -22,9 +22,6 @@
   },
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "start": "drosse serve server",
     "build": "make build",

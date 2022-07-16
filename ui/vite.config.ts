@@ -7,12 +7,17 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'lib'),
+      fileName: 'index',
       name: 'SisiAdminApp',
-      fileName: 'index'
     },
     cssCodeSplit: false,
     rollupOptions: {
-      external: ['vue']
+      external: ['vue'],
+      output: {
+        globals: {
+          vue: 'Vue'
+        }
+      }
     },
     outDir: resolve(__dirname, '../dist/ui')
   },

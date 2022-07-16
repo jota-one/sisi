@@ -1,12 +1,17 @@
+import http from 'http'
 import { Knex } from 'knex'
-import { getDb, TABLE } from './db'
+import { TABLE } from './constants'
 
-const getUpcomingEvents = async (db?: Knex) => {
-  const _db: Knex = db || await getDb()
-  return _db
+const getUpcomingEvents = async (db: Knex) => {
+  return db
     .select('*')
     .from(TABLE.EVENTS)
     .whereRaw('start_date > NOW()')
 }
 
-export default { getUpcomingEvents }
+const handleRoutes = async (db: Knex, prefix: String, req: http.IncomingMessage) => {
+  console.log('(sisi) handleRoutes', { prefix, url: req.url })
+  return { routeHandledBySisi: true }
+}
+
+export { getUpcomingEvents, handleRoutes }
