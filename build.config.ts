@@ -3,8 +3,10 @@ import { defineBuildConfig } from 'unbuild'
 
 export default defineBuildConfig({
   entries: [
-    './api'
+    './api/index'
   ],
+
+  outDir: 'dist/api',
 
   // Generates .d.ts declaration file
   declaration: true,

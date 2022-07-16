@@ -8,25 +8,26 @@
   "bugs": "https://github.com/jota-one/sisi/issues",
   "type": "module",
   "exports": {
-    ".": "./dist/index.js",
     "./api": {
-      "types": "./dist/api.d.ts",
-      "import": "./dist/api.mjs"
-    },
-    "./ui": {
-      "types": "./dist/ui.d.ts",
-      "import": "./dist/ui.mjs"
+      "types": "./dist/api/index.d.ts",
+      "import": "./dist/api/index.mjs"
     }
   },
   "typesVersions": {
     "*": {
-      "api": ["dist/api.d.ts"],
-      "ui": ["dist/ui.d.ts"]
+      "api": [
+        "dist/api/index.d.ts"
+      ]
     }
   },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "drosse serve server",
-    "build": "rm -rf dist && yarn build:api && yarn build:ui",
+    "build": "make build",
     "build:api": "unbuild",
     "build:ui": "cd ui && yarn build",
     "dev:ui": "cd ui && yarn dev"

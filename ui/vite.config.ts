@@ -8,23 +8,13 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'lib'),
       name: 'SisiAdminApp',
-      // the proper extensions will be added
-      fileName: 'ui'
+      fileName: 'index'
     },
     cssCodeSplit: false,
     rollupOptions: {
-      // make sure to externalize deps that shouldn't be bundled
-      // into your library
-      external: ['vue'],
-      output: {
-        // Provide global variables to use in the UMD build
-        // for externalized deps
-        globals: {
-          vue: 'Vue'
-        }
-      }
+      external: ['vue']
     },
-    outDir: resolve(__dirname, '../dist')
+    outDir: resolve(__dirname, '../dist/ui')
   },
   plugins: [vue()]
 })
