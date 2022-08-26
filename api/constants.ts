@@ -1,3 +1,3 @@
-export const TABLE = {
-  EVENTS: 'gaddress__session'
+export enum TABLE {
+  EVENTS = 'gaddress__session'
 }
