@@ -43,5 +43,5 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           yarn build
-          find . ! -path ./package.json ! -path ./dist -delete
+          rm -rf api build.config.ts index.js Makefile node_modules server tsconfig.json ui yarn*
           npx auto shipit
