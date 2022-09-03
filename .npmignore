@@ -1,0 +1,9 @@
+.autorc
+.github
+Makefile
+api/
+build.config.ts
+index.js
+server/
+tsconfig.json
+ui/

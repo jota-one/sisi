@@ -1,23 +1,41 @@
 {
-  "name": "sisi",
+  "name": "@jota-one/sisi",
   "version": "0.1.0",
   "description": "Super Intuitive Subscription Interface",
-  "main": "index.js",
-  "scripts": {
-    "start": "drosse serve app",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jota-one/sisi.git"
-  },
-  "author": "JAW (Juniors At Work)",
+  "repository": "jota-one/sisi",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jota-one/sisi/issues"
+  "author": "JAW (Juniors At Work)",
+  "bugs": "https://github.com/jota-one/sisi/issues",
+  "type": "module",
+  "exports": {
+    "./api": {
+      "types": "./dist/api/index.d.ts",
+      "import": "./dist/api/index.mjs"
+    }
   },
-  "homepage": "https://github.com/jota-one/sisi#readme",
+  "typesVersions": {
+    "*": {
+      "api": [
+        "dist/api/index.d.ts"
+      ]
+    }
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "scripts": {
+    "start": "drosse serve server",
+    "build": "make build",
+    "build:api": "unbuild",
+    "build:ui": "cd ui && yarn build",
+    "dev:ui": "cd ui && yarn dev"
+  },
   "devDependencies": {
-    "@jota-one/drosse": "^2.6.2"
+    "@jota-one/drosse": "^2.6.2",
+    "auto": "^10.37.4",
+    "typescript": "^4.7.4",
+    "unbuild": "^0.7.4"
+  },
+  "dependencies": {
+    "knex": "^2.1.0"
   }
 }
