@@ -2,9 +2,5 @@
   "author": {
     "name": "JAW (Juniors At Work)",
     "email": "juniors@jota.one"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
   }
 }

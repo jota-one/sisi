@@ -6,6 +6,10 @@
   "license": "ISC",
   "author": "JAW (Juniors At Work)",
   "bugs": "https://github.com/jota-one/sisi/issues",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "type": "module",
   "exports": {
     "./api": {
